@@ -1,0 +1,73 @@
+-- this step inserts the data for each day into the master database table.
+
+INSERT INTO datamodeling.active_creators
+
+(creator_id,
+active_date,
+username,
+display_name,
+url,
+email,
+last_login,
+date_joined,
+country,
+city,
+gender,
+birthyear,
+created_country,
+created_ip_address,
+follower_count,
+following_count,
+free_pro_features,
+free_premium_features,
+disable_email,
+is_confirmed_human,
+confirmed_human_at,
+last_known_country,
+hide_stats,
+is_select_creator,
+
+-- daily stats aggregations
+comments_gained,
+favorites_gained,
+followers_gained,
+listener_minutes_gained,
+promoted_lms_gained,
+organic_lms_gained,
+plays_gained,
+return_plays_gained,
+percentage_of_return_plays,
+reposts_gained,
+shows_uploaded,
+
+-- overall stats aggregations
+overall_shows_uploaded,
+average_plays_per_show,
+average_listener_minutes_per_show,
+overall_reposts,
+average_reposts_per_show,
+overall_favorites,
+average_favorites_per_show,
+average_quality_score,
+average_hotness_score,
+average_mixcloud_score,
+average_play_length_in_minutes,
+average_show_length_in_minutes,
+average_play_percentage,
+overall_comments,
+average_comments_per_show,
+overall_listener_minutes,
+overall_promoted_lms,
+overall_organic_lms,
+overall_plays,
+overall_organic_plays,
+overall_promoted_plays,
+overall_return_plays,
+overall_percentage_of_return_plays,
+
+-- rolling stats
+listener_minutes_28_days,
+plays_28_days,
+creator_tier)
+
+SELECT * FROM datamodeling.active_creators_staging;
